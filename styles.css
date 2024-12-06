@@ -1,0 +1,491 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #000;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 100%; 
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start; /* Alinha ao lado esquerdo */
+    align-items: center; /* Alinha verticalmente */
+}
+
+
+/* Estilo para a logo */
+.logo img {
+    max-width: 150px; /* Ajuste o valor conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem se ajuste dentro do container sem deformar */
+    /* A propriedade object-fit garante que a imagem não distorça se o contêiner tiver uma forma diferente */
+}
+
+.flex {
+    display: flex;
+}
+
+/* Estilo para o botão de contato */
+.btn-contato {
+    margin-left: auto; /* Isso faz com que o botão vá para o final da linha */
+    margin-right: 20px; /* Ajuste a margem conforme necessário */
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #f17ea1; /* Cor Rosa */
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+
+h2.titulo {
+    color: #fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #f17ea1; /* Cor Rosa */
+}
+
+button:hover,
+form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #ffc4d8; /* Cor Rosa */
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha ao lado esquerdo */
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+/* Flexbox para o menu - Itens lado a lado */
+header nav.menu-desktop {
+    display: flex;  /* Alinha os itens horizontalmente */
+    gap: 30px; /* Espaçamento entre os itens do menu */
+}
+
+header nav.menu-desktop a {
+    padding: 10px 20px; /* Adiciona um pouco de padding para dar mais área clicável */
+    color: #fff; /* Cor dos links do menu */
+    text-align: center;
+    text-decoration: none; /* Remove underline no link */
+    display: inline-block; /* Garante que o link tenha comportamento de bloco para ter uma área clicável maior */
+    transition: transform 0.2s ease; /* Transição para o efeito de hover */
+}
+
+header nav.menu-desktop a:hover {
+    color: #ffc4d8;
+    transform: scale(1.05); /* Efeito de aumento */
+}
+
+/* Ajuste da lista do menu */
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px; /* Espaçamento entre os itens da lista */
+    margin: 0; /* Remove margens extras */
+    padding: 0; /* Remove padding extras */
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block; /* Garante que os itens fiquem lado a lado */
+    padding: 0; /* Remove padding extra */
+}
+
+/* Para garantir que os itens tenham um bom efeito de hover, o link dentro do item da lista precisa ter a área de clique bem definida */
+
+
+/* Estilo do menu mobile já está implementado, não foi alterado aqui */
+
+/* TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #f17ea1; /* Cor Rosa */
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DO MENU MOBILE */
+
+.btn-abrir-menu{
+    display: none;
+}
+
+.btn-abrir-menu i{
+    color: #f17ea1; /* Cor Rosa */
+    font-size: 40px;
+}
+
+.menu-mobile{
+    background-color: #000;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i{
+    color: #f17ea1; /* Cor Rosa */
+    font-size: 30px;
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}   
+
+.menu-mobile nav ul li a:hover{
+    background-color: #f17ea1; /* Cor Rosa */
+    color: #000;
+}
+
+.overlay-menu{
+    background-color: #000000df;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+    color: #f17ea1; /* Cor Rosa */
+}
+
+.topo-do-site .txt-topo-site p {
+    color: #fff;
+    margin: 40px 0;
+}
+
+.topo-do-site .img-topo-site img {
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especiliadades {
+    padding: 40px 4%;
+}
+
+section.especiliadades .flex {
+    gap: 60px;
+}
+
+.especiliadades .especialidades-box {
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especiliadades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.especiliadades .especialidades-box i {
+    font-size: 70px;
+    color: #f17ea1; /* Cor Rosa */
+}
+
+.especiliadades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO SOBRE */
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: #fff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #f17ea1; /* Cor Rosa */
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f17ea1; /* Cor Rosa */
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* Estilo do Portfólio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
+
+section.portfolio .flex {
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: center center;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden; /* Garante que o vídeo não ultrapasse o contorno */
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.video-port {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo ocupar toda a área */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO FORMULÁRIO DE CONTATO */
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input {
+    width: 120px;
+    background-color: #f17ea1; /* Cor Rosa */
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO RODAPÉ */
+
+/* Estilo para o logo no rodapé */
+.logo-footer {
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    padding: 20px 0; /* Adiciona espaçamento ao redor da logo */
+}
+
+/* Estilo para a imagem dentro do logo-footer */
+.logo-footer img {
+    max-width: 150px; /* Tamanho máximo da logo, ajuste conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    object-fit: contain; /* Garante que a imagem não seja distorcida */
+    transition: transform 0.2s ease; /* Transição suave se precisar de efeito */
+}
+
+/* Responsividade: Ajuste a logo em telas menores */
+@media (max-width: 768px) {
+    .logo-footer img {
+        max-width: 120px; /* Logo menor para tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-footer img {
+        max-width: 100px; /* Logo ainda menor para smartphones */
+    }
+}
+
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ffffff1d;
+}
