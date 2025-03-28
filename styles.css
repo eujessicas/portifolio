@@ -153,14 +153,22 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .img-topo-site img {
-    width: 100%;
+    width: 70%;
     border-radius: 20px;
   
 }
 
-@keyframes flutuar {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(20px); }
+.vid-sobre {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.vid-sobre video {
+    max-width: 100%; /* Responsivo */
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
 }
 
 /* SEÇÃO FORMAÇÕES */
