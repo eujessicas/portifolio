@@ -75,9 +75,30 @@ header > .interface {
 }
 
 /* Logo */
+.logo {
+    position: relative;
+    display: inline-block;
+}
+
 .logo img {
     max-width: 150px;
     height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.logo .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.logo:hover .default-img {
+    opacity: 0;
+}
+
+.logo:hover .hover-img {
+    opacity: 1;
 }
 
 /* Menu desktop */
@@ -134,7 +155,7 @@ section.topo-do-site .flex {
 .topo-do-site .img-topo-site img {
     width: 100%;
     border-radius: 20px;
-    animation: flutuar 2s ease-in-out infinite alternate;
+  
 }
 
 @keyframes flutuar {
