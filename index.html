@@ -24,7 +24,6 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#Inicio">inicio</a></li>
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#formacoes">Formações</a></li>
                     <li><a href="#hackathons">Hackathons</a></li>
@@ -33,7 +32,7 @@
             </nav>
 
             <div class="btn-contato">
-                <a href="#contactForm">
+                <a href="#footer-contact">
                     <button>Contato</button>
                 </a>
             </div>
@@ -193,55 +192,13 @@
                 </div>
             </div>
         </section>
-
-        <form id="contactForm">
-            <input type="text" name="nome" id="nome" placeholder="Seu nome completo:" required>
-            <input type="email" name="email" id="email" placeholder="Seu e-mail:" required>
-            <input type="tel" name="telefone" id="telefone" placeholder="Seu WhatsApp:">
-            <textarea name="mensagem" id="mensagem" placeholder="Sua mensagem" required></textarea>
-            <div class="btn-enviar">
-                <button type="submit">ENVIAR</button>
-            </div>
-        </form>
         
-        <script>
-        document.getElementById('contactForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const formData = {
-                nome: document.getElementById('nome').value,
-                email: document.getElementById('email').value,
-                telefone: document.getElementById('telefone').value,
-                mensagem: document.getElementById('mensagem').value
-            };
-            
-            try {
-                const response = await fetch('http://localhost:5000/api/contact', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(formData)
-                });
-                
-                const data = await response.json();
-                
-                if (data.success) {
-                    alert('Mensagem enviada com sucesso!');
-                    document.getElementById('contactForm').reset();
-                } else {
-                    alert('Erro ao enviar mensagem. Por favor, tente novamente.');
-                }
-            } catch (error) {
-                console.error('Erro:', error);
-                alert('Erro ao conectar com o servidor.');
-            }
-        });
-        </script>
+       
     </main>
 
-    <footer>
+    <footer id="footer-contact"> 
         <div class="interface">
+            <h2 class="titulo">CONTATO <span>COMIGO.</span></h2>
             <div class="line-footer">
                 <div class="flex">
                     <div class="logo-footer">
@@ -251,6 +208,9 @@
                         <a href="mailto:jjessicammayara@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
                         <a href="https://www.linkedin.com/in/jessica-amancio-dev/"><button><i class="bi bi-linkedin"></i></button></a>
                         <a href="https://github.com/eujessicas"><button><i class="bi bi-github"></i></button></a>
+                        <a href="https://www.instagram.com/_eujessicas/"><button><i class="bi bi-instagram"></i></i></button></a>
+                        <a href="wa.me/5581996522190"><button><i class="bi bi-whatsapp"></i></button></a>
+                        <a href="https://github.com/eujessicas"><button><i class="bi bi-facebook"></i></button></a>
                     </div>
                 </div>
             </div>
