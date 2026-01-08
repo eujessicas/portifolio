@@ -15,13 +15,12 @@
 <body>
     <header>
         <div class="interface">
+            <!-- Logo -->
             <div class="logo">
-                <a href="#">
-                    <img src="src/logo.png" alt="Logo Jessica Amancio">
-                    <img src="src/logo2.png" class="hover-img">
-                </a>
+                <a href="#" class="btn-logo">Jessica Amancio</a>
             </div>
 
+            <!-- Menu desktop -->
             <nav class="menu-desktop">
                 <ul>
                     <li><a href="#sobre">Sobre</a></li>
@@ -31,12 +30,36 @@
                 </ul>
             </nav>
 
+            <!-- Botão de contato -->
             <div class="btn-contato">
                 <a href="#footer-contact">
                     <button>Contato</button>
                 </a>
             </div>
+
+            <!-- Hamburger menu -->
+           <button class="btn-abrir-menu" aria-label="Abrir menu">
+                <i class="bi bi-list"></i>
+            </button>
         </div>
+
+        <!-- Menu mobile -->
+        <nav id="menu-mobile" class="menu-mobile">
+            <div class="btn-fechar">
+                <i class="bi bi-x"></i>
+            </div>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#formacoes">Formações</a></li>
+                <li><a href="#hackathons">Hackathons</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#footer-contact">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- Overlay -->
+        <div id="overlay-menu" class="overlay-menu"></div>
     </header>
 
     <main>
@@ -68,12 +91,14 @@
                         <video width="320" height="240" autoplay muted>
                             <source src="src/jessicanocampus.mp4" type="video/mp4">
                             <source src="movie.ogg" type="video/ogg">
-                          Your browser does not support the video tag.
-                          </video>
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
                     <div class="txt-sobre">
-                        <p>"Formada em <strong>Técnico de Desenvolvimento de Sistemas</strong> pela ETE Gil Rodrigues (2023-2024) e atualmente cursando <strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong> na UNIASSELVI (2025-2027), combino conhecimentos técnicos especializados com uma abordagem criativa para soluções digitais.</p>
+                        <p>Formada em <strong>Técnico de Desenvolvimento de Sistemas</strong> pela ETE Gil Rodrigues (2023-2024) e atualmente cursando <strong>Tecnólogo em Análise e Desenvolvimento de Sistemas</strong> na UNIASSELVI (2025-2027), combino conhecimentos técnicos especializados com uma abordagem criativa para soluções digitais.</p>
                         <p>Minha jornada na tecnologia é impulsionada pela crença de que <em>'estudar transforma vidas'</em>. Domino tecnologias front-end e back-end, com experiência prática em projetos acadêmicos e pessoais.</p>
+                        
+                        <h3>Áreas de Estudo</h3><br>
                         <ul class="lista-habilidades">
                             <li><i class="bi bi-check-circle"></i> HTML5, CSS3 e JavaScript</li>
                             <li><i class="bi bi-check-circle"></i> React Native</li>
@@ -108,9 +133,9 @@
                             <p><i class="bi bi-book"></i> 2.400 horas</p>
                         </div>
                         <div class="progresso-curso">
-                            <p>Progresso: <span>20%</span></p>
+                            <p>Progresso: <span>29%</span></p>
                             <div class="barra-progresso">
-                                <div class="progresso" style="width: 20%"></div>
+                                <div class="progresso" style="width: 29%"></div>
                             </div>
                         </div>
                     </div>
@@ -118,7 +143,6 @@
             </div>
         </section>
 
-        <!-- NOVA SEÇÃO HACKATHONS -->
         <section id="hackathons" class="hackathons">
             <div class="interface">
                 <h2 class="titulo">MEUS <span>HACKATHONS.</span></h2>
@@ -140,6 +164,7 @@
                             <a href="https://www.canva.com/design/DAGXam0b9iE/ZziR3lYO_Y4e3D8zazAhEQ/edit?utm_content=DAGXam0b9iE&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" class="btn-projeto">Ver projeto <i class="bi bi-arrow-right"></i></a>
                         </div>
                     </div>
+
                     <!-- Hackathon 2 -->
                     <div class="hackathon-box">
                         <div class="hackathon-header">
@@ -148,7 +173,7 @@
                             <span class="destaque">2º Lugar</span>
                         </div>
                         <div class="hackathon-content">
-                            <p>Desenvolvimento de uma solução que vise a incluisão digital para as pessoas 50+ em 48 horas.</p>
+                            <p>Desenvolvimento de uma solução que vise a inclusão digital para as pessoas 50+ em 48 horas.</p>
                             <ul class="hackathon-details">
                                 <li><i class="bi bi-people"></i> Equipe de 5 pessoas</li>
                                 <li><i class="bi bi-code-slash"></i> Stack: React Native, JavaScript, HTML5 e CSS3</li>
@@ -165,25 +190,21 @@
             <div class="interface">
                 <h2 class="titulo">MEUS <span>PROJETOS.</span></h2>
                 <div class="flex">
-                    <!-- Projeto 1 -->
                     <div class="img-port" style="background-image: url('src/numerosecreto.png');">
                         <div class="overlay">
                             <a href="https://numerosecreto-vqa6.vercel.app/" class="btn-visitar">Visitar</a>
                         </div>
                     </div>
-                    <!-- Projeto 2 -->
                     <div class="img-port" style="background-image: url('src/netosdelia.png');">
                         <div class="overlay">
                             <a href="https://netosdelia.vercel.app/" class="btn-visitar">Visitar</a>
                         </div>
                     </div>
-                    <!-- Projeto 3 -->
                     <div class="img-port" style="background-image: url('src/amigosecreto.png');">
                         <div class="overlay">
-                            <a href="https://challenge-amigo-secreto-pt-main-omega.vercel.app/" class="btn-visitar"><br>Visitar</a>
+                            <a href="https://challenge-amigo-secreto-pt-main-omega.vercel.app/" class="btn-visitar">Visitar</a>
                         </div>
                     </div>
-                    <!-- Projeto 4 -->
                     <div class="img-port" style="background-image: url('src/logoPrinc.jpg');">
                         <div class="overlay">
                             <a href="https://energyfood-ys6e.vercel.app/" class="btn-visitar">Visitar</a>
@@ -192,8 +213,6 @@
                 </div>
             </div>
         </section>
-        
-       
     </main>
 
     <footer id="footer-contact"> 
@@ -201,17 +220,18 @@
             <h2 class="titulo">CONTATO <span>COMIGO.</span></h2>
             <div class="line-footer">
                 <div class="flex">
-                    <div class="logo-footer">
-                        <img src="src/logo.png" alt="Logo Jéssica Amancio">
-                    </div>
+                     <div class="logo">
+                 <div class="logo">
+                <a href="#" class="btn-logo">Jessica Amancio</a>
+            </div>
+            </div>
                     <div class="btn-social">
                         <a href="mailto:jjessicammayara@gmail.com"><button><i class="bi bi-envelope"></i></button></a>
                         <a href="https://www.linkedin.com/in/jessica-amancio-dev/"><button><i class="bi bi-linkedin"></i></button></a>
                         <a href="https://github.com/eujessicas"><button><i class="bi bi-github"></i></button></a>
-                        <a href="https://www.instagram.com/_eujessicas/"><button><i class="bi bi-instagram"></i></i></button></a>
-                        <a href="wa.me/5581996522190"><button><i class="bi bi-whatsapp"></i></button></a>
-                        <a href="https://github.com/eujessicas"><button><i class="bi bi-facebook"></i></button></a>
-                    </div>
+                        <a href="https://www.instagram.com/_eujessicas/"><button><i class="bi bi-instagram"></i></button></a>
+                        <a href="https://wa.me/5581996522190"><button><i class="bi bi-whatsapp"></i></button></a>
+                                            </div>
                 </div>
             </div>
             <div class="line-footer borda">
@@ -222,5 +242,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
